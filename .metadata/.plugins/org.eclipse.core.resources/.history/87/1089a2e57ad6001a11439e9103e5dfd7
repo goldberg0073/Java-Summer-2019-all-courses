@@ -1,0 +1,30 @@
+package arraysListReview;
+
+import java.util.*;
+
+public class ReviewArrayList {
+
+	public static void main(String[] args) {
+		ArrayList<String>list1=new ArrayList<>(Arrays.asList("hicham","hicham","noah","zeniti","hicham","hafidi","metouali","hicham"));
+		
+		RemovDup(list1);
+		
+
+		
+	}
+
+	public static ArrayList<String>RemovDup(ArrayList<String>list){
+		
+		ArrayList<String>Result=new ArrayList<String>();
+		for(String each : list) {
+			if(!Result.contains(each)) {
+				Result.add(each);
+			}
+		}
+		System.out.println(Result);
+		return Result;
+		
+	}
+	
+	
+}

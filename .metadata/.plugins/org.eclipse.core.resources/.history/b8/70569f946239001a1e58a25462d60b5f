@@ -1,0 +1,44 @@
+package Utility;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class DBUtility {
+	
+	final static String username="",
+			     password="",
+			     url="";
+	static Connection connection ;
+	static Statement statement;
+	
+	
+	
+	
+	static {
+		try {
+		connection=DriverManager.getConnection(url, username, password);
+		statement=connection.createStatement();
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	
+	
+	
+			public static ResultSet getResult(String sql) {
+				
+				ResultSet result=null;
+				try {
+				 result=statement.executeQuery(sql);
+				}catch(Exception e){
+					
+				}
+				
+				return result;
+			}
+	             
+
+}

@@ -1,0 +1,44 @@
+package Utility;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class DBUtility {
+	
+	private final static String username=ConfigurationReader.getProperty("hr"),
+			     password=ConfigurationReader.getProperty("hr"),
+			     url=ConfigurationReader.getProperty("dbc:oracle:thin:@3.84.235.168:1521:xe");
+	public static Connection connection ;
+	public static Statement statement;
+	
+	
+	
+	
+	static {
+		try {
+		connection=DriverManager.getConnection(url, username, password);
+		statement=connection.createStatement();
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	
+	
+	
+			public static ResultSet getResult(String sql) {
+				
+				ResultSet result=null;
+				try {
+				 result=statement.executeQuery(sql);
+				}catch(Exception e){
+					
+				}
+				
+				return result;
+			}
+	             
+
+}

@@ -1,0 +1,28 @@
+package repli1;
+
+import java.util.*;
+
+public class InterviewPractice {
+
+public static void main(String[] args) {
+
+
+	String str="OAQAQAAAZKLLXLZZZKKKOOO";
+	Map<Character, Integer>map=new LinkedHashMap<>();
+	char [] chars = str.toCharArray();
+	for (int i = 0; i < str.length(); i++) {
+	    if(map.containsKey(chars[i])) {
+	    	map.put(chars[i],map.get(chars[i])+1);
+	    }else {
+	    	map.put(chars[i],1);
+	    }
+		
+	}
+
+	
+	
+	
+	
+  }
+
+}

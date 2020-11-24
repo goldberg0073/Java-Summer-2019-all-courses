@@ -1,0 +1,20 @@
+package JDBC_Practice;
+
+import java.sql.ResultSet;
+
+import Utility.DBUtility;
+
+public class ResultSet_DataStracture {
+
+	
+	public static void main(String[] args) {
+		
+		
+	ResultSet resultSet=DBUtility.getResult("Select * from employees");
+		
+		
+		
+	}
+	
+	
+}

@@ -1,0 +1,17 @@
+package JDBC_Practice;
+
+import Utility.DBUtility;
+
+public class ResultSet_Map {
+	
+	
+	public static void main(String[] args) {
+		
+	DBUtility.getResult("Select * from Employees");
+		
+		
+		
+		
+	}
+
+}
